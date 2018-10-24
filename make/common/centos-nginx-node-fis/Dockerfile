@@ -1,6 +1,6 @@
 FROM centos:7
 
-MAINTAINER zhanglin_csd<zhanglin_csd@si-tech.com.cn>
+MAINTAINER shilei_csd<shilei_csd@si-tech.com.cn>
 
 RUN mkdir -p /usr/local/node
 
@@ -42,6 +42,8 @@ RUN set -ex \
     && rm -rf /var/cache/yum/* /root/* /tmp/* \
     && cd /usr/local/bin \
     && ln -s /usr/local/nginx/sbin/nginx nginx 
+    
+RUN sudo apt-get install git
 
 EXPOSE 80 443
 
