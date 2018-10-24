@@ -43,7 +43,7 @@ RUN set -ex \
     && cd /usr/local/bin \
     && ln -s /usr/local/nginx/sbin/nginx nginx 
     
-RUN sudo apt-get install git
+RUN yum install git
 
 EXPOSE 80 443
 
